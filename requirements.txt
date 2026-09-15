@@ -1,0 +1,1 @@
+# Samanvay runs on the Python standard library alone - no packages required.

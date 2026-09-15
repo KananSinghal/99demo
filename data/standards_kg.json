@@ -1,0 +1,274 @@
+{
+  "_comment": "Standards knowledge graph. Families group designations that name the same material; edges carry a citation and are typed. Built offline, reviewed, READ-ONLY at runtime. Extend by adding families/edges - no code change required.",
+  "version": "1.0.0",
+  "families": {
+    "SS316": {
+      "label": "AISI 316 molybdenum-bearing austenitic stainless steel",
+      "aliases": ["316", "SS316", "SS 316", "SS-316", "S316", "AISI 316", "AISI316", "SUS316", "UNS S31600", "S31600", "1.4401", "X5CRNIMO17-12-2", "X5CrNiMo17-12-2", "STAINLESS STEEL 316", "SST 316", "SS316 GRADE"],
+      "citation": "ASTM A240 / EN 10088-1 / UNS S31600"
+    },
+    "SS316L": {
+      "label": "AISI 316L low-carbon austenitic stainless steel",
+      "aliases": ["316L", "SS316L", "SS 316L", "UNS S31603", "S31603", "1.4404", "X2CRNIMO17-12-2"],
+      "citation": "ASTM A240 / EN 10088-1 / UNS S31603"
+    },
+    "SS316TI": {
+      "label": "AISI 316Ti titanium-stabilised austenitic stainless steel",
+      "aliases": ["316TI", "316Ti", "SS316TI", "UNS S31635", "1.4571"],
+      "citation": "ASTM A240 / EN 10088-1 / UNS S31635"
+    },
+    "SS304": {
+      "label": "AISI 304 austenitic stainless steel",
+      "aliases": ["304", "SS304", "SS 304", "SS-304", "S304", "AISI 304", "SUS304", "UNS S30400", "S30400", "1.4301", "X5CRNI18-10", "STAINLESS STEEL 304"],
+      "citation": "ASTM A240 / EN 10088-1 / UNS S30400"
+    },
+    "SS304L": {
+      "label": "AISI 304L low-carbon austenitic stainless steel",
+      "aliases": ["304L", "SS304L", "UNS S30403", "S30403", "1.4307"],
+      "citation": "ASTM A240 / EN 10088-1 / UNS S30403"
+    },
+    "CS_A105": {
+      "label": "Carbon steel forgings for piping components (ASTM A105)",
+      "aliases": ["A105", "ASTM A105", "A105N", "SA105", "SA-105", "P250GH", "1.0460", "C22.8"],
+      "citation": "ASTM A105 / EN 10222-2 P250GH (1.0460)"
+    },
+    "CS_A106B": {
+      "label": "Seamless carbon steel pipe for high-temperature service, Grade B",
+      "aliases": ["A106 GR.B", "A106 GRB", "A106B", "A106 GR B", "ASTM A106 GR.B", "SA106 GR.B", "SA-106 GR B", "A 106 GR.B"],
+      "citation": "ASTM A106/A106M Grade B"
+    },
+    "CS_GENERIC": {
+      "label": "Carbon steel, grade unspecified",
+      "aliases": ["CS", "CARBON STEEL", "MS", "MILD STEEL"],
+      "citation": "grade unspecified - insufficient for identity"
+    },
+    "IS2062_E250": {
+      "label": "Hot rolled structural steel IS 2062 E250",
+      "aliases": ["IS 2062 E250", "IS2062 E250", "E250", "IS 2062 GR.A", "IS2062"],
+      "citation": "IS 2062:2011 Grade E250"
+    },
+    "FC_A4": {
+      "label": "ISO 3506 stainless fastener class A4 (molybdenum-bearing austenitic)",
+      "aliases": ["A4", "A-4", "CLASS A4"],
+      "citation": "ISO 3506-1 Table 2"
+    },
+    "FC_A2": {
+      "label": "ISO 3506 stainless fastener class A2 (austenitic, no Mo)",
+      "aliases": ["A2", "A-2", "CLASS A2"],
+      "citation": "ISO 3506-1 Table 2"
+    },
+    "FC_A4_70": {
+      "label": "ISO 3506 fastener class A4-70 (A4 material, 700 MPa min tensile)",
+      "aliases": ["A4-70", "A4 70", "A470"],
+      "citation": "ISO 3506-1 property class A4-70"
+    },
+    "FC_A4_80": {
+      "label": "ISO 3506 fastener class A4-80 (A4 material, 800 MPa min tensile)",
+      "aliases": ["A4-80", "A4 80", "A480"],
+      "citation": "ISO 3506-1 property class A4-80"
+    },
+    "FC_A2_70": {
+      "label": "ISO 3506 fastener class A2-70",
+      "aliases": ["A2-70", "A2 70", "A270"],
+      "citation": "ISO 3506-1 property class A2-70"
+    },
+    "B7": {
+      "label": "ASTM A193 Grade B7 alloy steel stud bolt",
+      "aliases": ["B7", "A193 B7", "ASTM A193 B7", "A193-B7", "SA193 B7"],
+      "citation": "ASTM A193/A193M Grade B7"
+    },
+    "B7M": {
+      "label": "ASTM A193 Grade B7M (sour-service tempered)",
+      "aliases": ["B7M", "A193 B7M", "ASTM A193 B7M"],
+      "citation": "ASTM A193/A193M Grade B7M - NACE MR0175 acceptable"
+    },
+    "PC_8_8": {
+      "label": "ISO 898-1 property class 8.8 carbon steel bolt",
+      "aliases": ["8.8", "CLASS 8.8", "GR 8.8", "GRADE 8.8", "PROPERTY CLASS 8.8"],
+      "citation": "ISO 898-1 property class 8.8"
+    },
+    "PC_10_9": {
+      "label": "ISO 898-1 property class 10.9 alloy steel bolt",
+      "aliases": ["10.9", "CLASS 10.9", "GR 10.9", "GRADE 10.9"],
+      "citation": "ISO 898-1 property class 10.9"
+    },
+    "PC_12_9": {
+      "label": "ISO 898-1 property class 12.9 alloy steel bolt",
+      "aliases": ["12.9", "CLASS 12.9", "GR 12.9"],
+      "citation": "ISO 898-1 property class 12.9"
+    },
+    "PTFE": {
+      "label": "Polytetrafluoroethylene",
+      "aliases": ["PTFE", "TEFLON", "T.F.E", "TFE"],
+      "citation": "ASTM D4894"
+    },
+    "EPDM": {
+      "label": "Ethylene propylene diene monomer rubber",
+      "aliases": ["EPDM", "E.P.D.M"],
+      "citation": "ASTM D2000"
+    },
+    "NBR": {
+      "label": "Nitrile butadiene rubber",
+      "aliases": ["NBR", "BUNA-N", "BUNA N", "NITRILE"],
+      "citation": "ASTM D2000"
+    },
+    "XLPE": {
+      "label": "Cross-linked polyethylene insulation",
+      "aliases": ["XLPE", "X.L.P.E", "XLPE INSULATED"],
+      "citation": "IS 7098 / IEC 60502"
+    },
+    "CU": {
+      "label": "Electrolytic copper conductor",
+      "aliases": ["CU", "COPPER", "ELECTROLYTIC COPPER"],
+      "citation": "IS 8130 Class 2"
+    },
+    "AL": {
+      "label": "Aluminium conductor",
+      "aliases": ["AL", "ALUMINIUM", "ALUMINUM"],
+      "citation": "IS 8130"
+    },
+    "GRAPHITE": {
+      "label": "Flexible graphite",
+      "aliases": ["GRAPHITE", "FLEXIBLE GRAPHITE", "GRAFOIL"],
+      "citation": "ASME B16.20"
+    },
+    "WCB": {
+      "label": "ASTM A216 WCB cast carbon steel",
+      "aliases": ["WCB", "A216 WCB", "ASTM A216 WCB", "SA216 WCB"],
+      "citation": "ASTM A216/A216M Grade WCB"
+    },
+    "CF8M": {
+      "label": "ASTM A351 CF8M cast austenitic stainless (316 equivalent)",
+      "aliases": ["CF8M", "A351 CF8M", "ASTM A351 CF8M", "SA351 CF8M"],
+      "citation": "ASTM A351/A351M Grade CF8M"
+    },
+    "ARMOUR_GENERIC": {
+      "label": "Armoured cable, armour construction unspecified",
+      "aliases": ["ARMOURED", "ARMORED", "ARMD", "ARMOUR", "ARMOR"],
+      "citation": "IS 7098 Part 1 / IEC 60502-1"
+    },
+    "ARMOUR_SWA": {
+      "label": "Galvanised steel wire armour",
+      "aliases": ["SWA", "STEEL WIRE ARMOUR", "STEEL WIRE ARMOURED", "GSWA"],
+      "citation": "IS 3975 / IEC 60502-1 - round galvanised steel wire armour"
+    },
+    "ARMOUR_STA": {
+      "label": "Galvanised steel strip armour",
+      "aliases": ["STA", "STEEL STRIP ARMOUR", "STEEL STRIP ARMOURED", "GSSA"],
+      "citation": "IS 3975 / IEC 60502-1 - formed steel strip armour"
+    },
+    "ARMOUR_NONE": {
+      "label": "Unarmoured cable",
+      "aliases": ["UNARMOURED", "UNARMORED", "UNARMD", "PLAIN SHEATH"],
+      "citation": "IS 7098 Part 1 - no armour layer"
+    }
+  },
+  "edges": [
+    {"from": "FC_A4_70", "to": "FC_A4", "type": "memberOf", "citation": "ISO 3506-1: A4-70 is property class 70 of material group A4"},
+    {"from": "FC_A4_80", "to": "FC_A4", "type": "memberOf", "citation": "ISO 3506-1: A4-80 is property class 80 of material group A4"},
+    {"from": "FC_A2_70", "to": "FC_A2", "type": "memberOf", "citation": "ISO 3506-1: A2-70 is property class 70 of material group A2"},
+
+    {"from": "FC_A4", "to": "SS316", "type": "gradeSatisfiedBy", "partial": true,
+     "citation": "ISO 3506-1 Table 2 - class A4 is molybdenum-bearing austenitic; admits 316, 316L and 316Ti, so the mapping is one-to-many"},
+    {"from": "FC_A4", "to": "SS316L", "type": "gradeSatisfiedBy", "partial": true,
+     "citation": "ISO 3506-1 Table 2 - class A4 admits 316L"},
+    {"from": "FC_A4", "to": "SS316TI", "type": "gradeSatisfiedBy", "partial": true,
+     "citation": "ISO 3506-1 Table 2 - class A4 admits 316Ti"},
+    {"from": "FC_A2", "to": "SS304", "type": "gradeSatisfiedBy", "partial": true,
+     "citation": "ISO 3506-1 Table 2 - class A2 is austenitic without Mo; admits 304 and 304L"},
+    {"from": "FC_A2", "to": "SS304L", "type": "gradeSatisfiedBy", "partial": true,
+     "citation": "ISO 3506-1 Table 2 - class A2 admits 304L"},
+
+    {"from": "SS316L", "to": "SS316", "type": "variantOf", "partial": true,
+     "citation": "316L is the low-carbon variant of 316; interchangeable only where carbon content is not a stated requirement"},
+    {"from": "SS304L", "to": "SS304", "type": "variantOf", "partial": true,
+     "citation": "304L is the low-carbon variant of 304"},
+    {"from": "CF8M", "to": "SS316", "type": "castEquivalentOf", "partial": true,
+     "citation": "ASTM A351 CF8M is the cast equivalent of wrought 316; not interchangeable where wrought product form is specified"},
+
+    {"from": "CS_A105", "to": "CS_GENERIC", "type": "memberOf",
+     "citation": "A105 is a specific carbon steel forging grade"},
+    {"from": "CS_A106B", "to": "CS_GENERIC", "type": "memberOf",
+     "citation": "A106 Gr.B is a specific carbon steel pipe grade"},
+    {"from": "IS2062_E250", "to": "CS_GENERIC", "type": "memberOf",
+     "citation": "IS 2062 E250 is a specific structural carbon steel grade"},
+
+    {"from": "B7M", "to": "B7", "type": "sourServiceVariantOf", "partial": true,
+     "citation": "ASTM A193 B7M is the hardness-controlled variant of B7 for NACE MR0175 sour service; B7 does not substitute for B7M"},
+
+    {"from": "ARMOUR_SWA", "to": "ARMOUR_GENERIC", "type": "memberOf", "partial": true,
+     "citation": "IEC 60502-1 - steel wire armour is one armour construction; a record stating only 'armoured' does not specify which"},
+    {"from": "ARMOUR_STA", "to": "ARMOUR_GENERIC", "type": "memberOf", "partial": true,
+     "citation": "IEC 60502-1 - steel strip armour is one armour construction; a record stating only 'armoured' does not specify which"}
+  ],
+  "orders": {
+    "pipe_schedule": {
+      "sequence": ["SCH5", "SCH5S", "SCH10", "SCH10S", "SCH20", "SCH30", "SCH40", "SCH40S", "STD", "SCH60", "SCH80", "SCH80S", "XS", "SCH100", "SCH120", "SCH140", "SCH160", "XXS"],
+      "equivalences": [["SCH40", "STD"], ["SCH80", "XS"], ["SCH40", "SCH40S"], ["SCH80", "SCH80S"], ["SCH5", "SCH5S"], ["SCH10", "SCH10S"]],
+      "higher_substitutes_lower": true,
+      "caveat": "Thicker wall gives the same outside diameter under ASME B36.10M but a smaller bore and greater weight. Check hydraulic and support-loading impact before substituting.",
+      "equivalence_caveat": "STD equals SCH40 only up to NPS 10; XS equals SCH80 only up to NPS 8. Above those sizes the wall thicknesses diverge.",
+      "citation": "ASME B36.10M / B36.19M"
+    },
+    "property_class": {
+      "sequence": ["4.6", "4.8", "5.6", "5.8", "6.8", "8.8", "9.8", "10.9", "12.9"],
+      "higher_substitutes_lower": true,
+      "caveat": "Higher property class raises tensile strength but lowers ductility and changes the tightening torque. Re-issue the torque specification before substituting.",
+      "citation": "ISO 898-1"
+    },
+    "ss_fastener_class": {
+      "sequence": ["A2-50", "A2-70", "A2-80", "A4-50", "A4-70", "A4-80"],
+      "higher_substitutes_lower": false,
+      "caveat": "A2 and A4 are different material groups, not grades of one scale. Only compare within the same group.",
+      "citation": "ISO 3506-1"
+    },
+    "pressure_class": {
+      "sequence": ["150", "300", "400", "600", "900", "1500", "2500"],
+      "higher_substitutes_lower": true,
+      "requires_equal": ["end_connection", "nominal_size"],
+      "caveat": "A higher pressure class only substitutes when the end connection and face-to-face dimensions match. Flange bolt circles differ between classes under ASME B16.5, so a higher-class flange does not bolt to a lower-class one.",
+      "citation": "ASME B16.5 / B16.34"
+    },
+    "cable_voltage": {
+      "sequence": ["650V", "1100V", "3.3KV", "6.6KV", "11KV", "33KV"],
+      "higher_substitutes_lower": true,
+      "caveat": "Higher voltage grade means thicker insulation and a larger overall diameter - check gland and tray sizing.",
+      "citation": "IS 7098 / IEC 60502"
+    }
+  },
+  "service_qualifiers": {
+    "NACE_MR0175": {
+      "label": "Sour service qualification",
+      "aliases": ["NACE MR0175", "NACE MR-0175", "MR0175", "ISO 15156", "NACE", "SOUR SERVICE", "SOUR"],
+      "citation": "NACE MR0175 / ISO 15156",
+      "rule": "non_inferable",
+      "note": "Absence of the qualifier means UNKNOWN, never NOT REQUIRED. A record without it can never auto-match one with it."
+    },
+    "ATEX": {
+      "label": "Explosive atmosphere certification",
+      "aliases": ["ATEX", "IECEX", "IEC EX", "EX D", "EXD", "FLAMEPROOF", "FLP"],
+      "citation": "IEC 60079 / ATEX 2014/34/EU",
+      "rule": "non_inferable"
+    },
+    "FIRE_SAFE": {
+      "label": "Fire-safe valve design",
+      "aliases": ["FIRE SAFE", "FIRESAFE", "API 607", "API 6FA"],
+      "citation": "API 607 / API 6FA",
+      "rule": "non_inferable"
+    },
+    "OXYGEN_CLEAN": {
+      "label": "Cleaned for oxygen service",
+      "aliases": ["OXYGEN CLEAN", "O2 CLEAN", "OXYGEN SERVICE"],
+      "citation": "ASTM G93",
+      "rule": "non_inferable"
+    }
+  },
+  "superseded": [
+    {"old": "IS 1367 PART 3 1979", "new": "IS 1367 PART 3 2002", "citation": "IS 1367-3 revised 2002"},
+    {"old": "ISO 3506:1997", "new": "ISO 3506-1:2020", "citation": "ISO 3506 split into parts and revised 2020"},
+    {"old": "BS 3692", "new": "ISO 4014", "citation": "BS 3692 withdrawn, superseded by ISO 4014 for hexagon head bolts"},
+    {"old": "DIN 933", "new": "ISO 4017", "citation": "DIN 933 superseded by ISO 4017 (fully threaded hexagon head screws)"},
+    {"old": "DIN 931", "new": "ISO 4014", "citation": "DIN 931 superseded by ISO 4014 (partially threaded hexagon head bolts)"},
+    {"old": "DIN 934", "new": "ISO 4032", "citation": "DIN 934 superseded by ISO 4032 (hexagon nuts style 1)"}
+  ]
+}

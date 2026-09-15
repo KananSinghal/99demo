@@ -1,0 +1,35 @@
+# Samanvay runs on the Python 3 standard library alone -- nothing here is
+# required. This file documents the upgrade path for a team with normal
+# internet/pip access (i.e. not this build's sandbox, which has pypi.org
+# blocked at the network policy level -- see README.md, "Why zero
+# dependencies"). None of this changes the design; it swaps the hash-based
+# embedding and hand-rolled logistic reranker for the real thing via the
+# SAMANVAY_EMBEDDING / SAMANVAY_RERANK environment variables in
+# samanvay/config.py. Nothing else in the codebase changes.
+#
+#   pip install -r requirements-optional.txt --break-system-packages
+#   export SAMANVAY_EMBEDDING=st
+#   export SAMANVAY_RERANK=cross
+#   python3 -m samanvay.server
+#
+# Or run samanvay/server_fastapi.py instead of samanvay/server.py for an
+# ASGI server with auto-generated OpenAPI docs -- it mounts the identical
+# routes, so nothing about the API surface or the web console changes.
+
+# real sentence embeddings (bi-encoder stage) instead of hashed n-grams
+sentence-transformers>=2.7
+
+# real cross-encoder reranking instead of the from-scratch logistic model
+# (sentence-transformers' CrossEncoder covers this too; listed for clarity)
+# torch is a transitive dependency of sentence-transformers and is not listed
+# separately here -- pip will resolve the right build for the host machine.
+
+# ASGI server + framework, if running server_fastapi.py instead of the
+# built-in http.server implementation
+fastapi>=0.110
+uvicorn[standard]>=0.29
+
+# only if swapping sqlite3 for Postgres + pgvector at national-registry scale
+# (see the blueprint's "federated deployment" section) -- not needed for the
+# CPSE-node or single-instance deployment this build targets
+# psycopg[binary]>=3.1

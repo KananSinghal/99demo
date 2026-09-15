@@ -1,0 +1,11 @@
+{
+  "_comment": "Mined from the ingested corpus by core.lexicon. Regenerated on every full ingest.",
+  "corpus_size": 359,
+  "mined": {
+    "BRNG": "BEARING",
+    "BUTTWLD": "BUTTWELD",
+    "GRVE": "GROOVE",
+    "THRDED": "THREADED",
+    "UNARMRD": "UNARMOURED"
+  }
+}

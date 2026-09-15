@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Samanvay - One Nation, One Material Code</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230E5C63'/><text x='16' y='23' font-size='19' text-anchor='middle' fill='%23fff' font-family='monospace'>S</text></svg>">
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">
+    <b>Samanvay</b>
+    <span>One Nation, One Material Code</span>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button data-view="review" class="on">Review</button>
+    <button data-view="catalogue">Catalogue</button>
+    <button data-view="analytics">Analytics</button>
+    <button data-view="redeploy">Buy or Borrow</button>
+    <button data-view="create">Create check</button>
+    <button data-view="ledger">Ledger</button>
+  </nav>
+  <div class="toolbar">
+    <button class="btn" id="btn-demo" title="Load the synthetic multi-CPSE corpus">Load corpus</button>
+    <button class="btn primary" id="btn-run" title="Run the nine-stage cascade">Run cascade</button>
+    <button class="btn" id="btn-theme" title="Toggle theme" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================ REVIEW -->
+<section class="view on" id="view-review">
+  <h2>Steward review console</h2>
+  <p class="sub">Ranked by expected value of information &mdash; uncertainty &times; cluster size &times; spend &mdash; so the human hours go where the money is. The AI proposes; it cannot endorse, merge, mint or write to any ERP.</p>
+
+  <div class="tiles" id="review-tiles"></div>
+
+  <div class="row" style="margin-bottom:12px">
+    <label class="f"><span>Tier</span>
+      <select id="f-tier">
+        <option value="review">Steward review</option>
+        <option value="auto_accept">Auto-accepted</option>
+        <option value="auto_reject">Auto-rejected</option>
+      </select>
+    </label>
+    <label class="f"><span>Relation</span>
+      <select id="f-relation">
+        <option value="">any</option>
+        <option>IDENTICAL</option><option>EQUIVALENT</option><option>SUBSTITUTABLE</option>
+        <option>VARIANT_OF</option><option>UNDETERMINED</option><option>DISTINCT</option>
+      </select>
+    </label>
+    <label class="f"><span>Class</span><select id="f-class"><option value="">any</option></select></label>
+    <label class="f"><span>Acting as (steward)</span><input type="text" id="f-actor" value="r.mehta" autocomplete="off"></label>
+    <label class="f"><span>Your CPSE</span><select id="f-cpse"></select></label>
+  </div>
+
+  <div class="split">
+    <div class="queue" id="queue"><div class="empty">Load the corpus and run the cascade to populate the queue.</div></div>
+    <div id="evidence"><div class="panel"><div class="empty">Select a proposal to see its evidence card.</div></div></div>
+  </div>
+  <p class="kbdhint">Keyboard: <kbd>J</kbd>/<kbd>K</kbd> move &nbsp; <kbd>A</kbd> endorse &nbsp; <kbd>R</kbd> reject &nbsp; <kbd>D</kbd> mark distinct</p>
+</section>
+
+<!-- ========================================================= CATALOGUE -->
+<section class="view" id="view-catalogue">
+  <h2>National catalogue</h2>
+  <p class="sub">Every national material code, its golden description, its classification facets, and the CPSE codes mapped to it. The CPSE material numbers are never changed &mdash; the NMC is an additive cross-reference.</p>
+  <div class="row" style="margin-bottom:12px">
+    <label class="f"><span>Search</span><input type="text" id="c-q" placeholder="BOLT, VALVE, SS316, 6&quot;&hellip;" autocomplete="off"></label>
+    <label class="f"><span>Class</span><select id="c-class"><option value="">any</option></select></label>
+    <label class="f"><span>CPSE</span><select id="c-cpse"><option value="">any</option></select></label>
+    <label class="f shrink"><span>&nbsp;</span><button class="btn primary" id="c-go">Search</button></label>
+  </div>
+  <div id="catalogue-out"></div>
+</section>
+
+<!-- ========================================================= ANALYTICS -->
+<section class="view" id="view-analytics">
+  <h2>Harmonisation analytics</h2>
+  <p class="sub">The funnel, the duplicate density, the unit-of-measure traps, and the two curves that matter: how much spend each steward decision resolves, and how the model improves as it is used.</p>
+  <div id="analytics-out"><div class="empty">Run the cascade to populate.</div></div>
+</section>
+
+<!-- ========================================================== REDEPLOY -->
+<section class="view" id="view-redeploy">
+  <h2>Buy or Borrow</h2>
+  <p class="sub">Symmetric deduplication saves code count. <strong>Directed substitutability satisfies a live requisition from another CPSE's non-moving stock.</strong> One is a data-quality metric; the other is money moving.</p>
+  <div class="row" style="margin-bottom:12px">
+    <label class="f"><span>Requirement</span><input type="text" id="r-q" placeholder="GATE VALVE 6&quot; 150# WCB FLANGED" autocomplete="off"></label>
+    <label class="f shrink" style="flex:0 0 130px"><span>Quantity</span><input type="number" id="r-qty" value="50" min="0"></label>
+    <label class="f shrink" style="flex:0 0 150px"><span>Requesting CPSE</span><select id="r-cpse"></select></label>
+    <label class="f shrink" style="flex:0 0 150px"><span>Idle at least (days)</span><input type="number" id="r-idle" value="365" min="0"></label>
+    <label class="f shrink"><span>&nbsp;</span><button class="btn primary" id="r-go">Resolve</button></label>
+  </div>
+  <div id="redeploy-out"><div class="empty">Enter a requirement, or open a code from the catalogue.</div></div>
+</section>
+
+<!-- ============================================================ CREATE -->
+<section class="view" id="view-create">
+  <h2>Duplicate check at creation</h2>
+  <p class="sub">Cleaning without prevention means the mess returns within three years. This is the same cascade with a corpus of one &mdash; wired into MDG validation or a BAdI on <span class="m">MM01</span>, it stops the duplicate before it exists.</p>
+  <div class="row" style="margin-bottom:12px">
+    <label class="f"><span>New material description</span><input type="text" id="n-desc" placeholder="HEX BOLT M16X60 SS316 FULL THD" autocomplete="off"></label>
+    <label class="f shrink" style="flex:0 0 110px"><span>UoM</span><input type="text" id="n-uom" value="NO"></label>
+    <label class="f shrink" style="flex:0 0 150px"><span>Creating CPSE</span><select id="n-cpse"></select></label>
+    <label class="f shrink"><span>&nbsp;</span><button class="btn primary" id="n-go">Check</button></label>
+  </div>
+  <div id="create-out"></div>
+</section>
+
+<!-- ============================================================ LEDGER -->
+<section class="view" id="view-ledger">
+  <h2>Governance ledger</h2>
+  <p class="sub">Append-only, hash-chained. There is no <span class="m">UPDATE</span> and no <span class="m">DELETE</span> &mdash; current state is a projection of the log, which is why un-merge is a replay rather than a recovery.</p>
+  <div class="toolbar" style="margin-bottom:12px">
+    <button class="btn" id="l-verify">Verify chain</button>
+    <button class="btn" id="l-replay">Replay projection</button>
+    <button class="btn" id="l-merkle">Publish Merkle root</button>
+    <button class="btn" id="l-crs">ERP outbox</button>
+  </div>
+  <div id="ledger-out"></div>
+</section>
+
+</main>
+
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>

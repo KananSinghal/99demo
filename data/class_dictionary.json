@@ -1,0 +1,170 @@
+{
+  "_comment": "Class property dictionary. One entry per material class: the approved item name, the classification facets, and the ordered attribute list. 'mandatory' attributes must be present for IDENTICAL; 'blocking' attributes cause DISTINCT on conflict; 'ordered' names an ordering in standards_kg.orders that enables directed substitutability. Extraction and rendering are both driven from here - adding a class needs no code change.",
+  "version": "1.0.0",
+  "classes": {
+    "FASTENER_BOLT": {
+      "item_name": "BOLT, HEXAGON HEAD",
+      "nsc": "5306",
+      "unspsc": "31161501",
+      "hsn": "73181500",
+      "eclass": "23-11-01-01",
+      "keywords": ["BOLT", "HEX BOLT", "HEXAGON BOLT", "HEXAGONAL BOLT", "SCREW HEX", "HEX HD BOLT", "SETSCREW", "SET SCREW", "STUD BOLT", "STUD"],
+      "attributes": [
+        {"key": "thread", "label": "THREAD", "mandatory": true, "blocking": true},
+        {"key": "length_mm", "label": "LENGTH", "unit": "MM", "numeric": true, "mandatory": true, "blocking": true, "tolerance": 0.0},
+        {"key": "material", "label": "MATERIAL", "mandatory": true, "blocking": true, "kg": true},
+        {"key": "grade", "label": "GRADE", "mandatory": false, "blocking": false, "kg": true, "ordered": "property_class"},
+        {"key": "ss_class", "label": "CLASS", "mandatory": false, "blocking": false, "kg": true, "ordered": "ss_fastener_class"},
+        {"key": "standard", "label": "STD", "mandatory": false, "blocking": false, "standard": true},
+        {"key": "head", "label": "HEAD", "mandatory": false, "blocking": true},
+        {"key": "thread_length", "label": "THREAD LENGTH", "mandatory": false, "blocking": false},
+        {"key": "finish", "label": "FINISH", "mandatory": false, "blocking": false},
+        {"key": "service", "label": "SERVICE", "mandatory": false, "blocking": true, "service": true}
+      ]
+    },
+    "FASTENER_NUT": {
+      "item_name": "NUT, HEXAGON",
+      "nsc": "5310",
+      "unspsc": "31161600",
+      "hsn": "73181600",
+      "eclass": "23-11-03-01",
+      "keywords": ["NUT", "HEX NUT", "HEXAGON NUT", "LOCK NUT", "NYLOC"],
+      "attributes": [
+        {"key": "thread", "label": "THREAD", "mandatory": true, "blocking": true},
+        {"key": "material", "label": "MATERIAL", "mandatory": true, "blocking": true, "kg": true},
+        {"key": "grade", "label": "GRADE", "mandatory": false, "kg": true, "ordered": "property_class"},
+        {"key": "ss_class", "label": "CLASS", "mandatory": false, "kg": true, "ordered": "ss_fastener_class"},
+        {"key": "standard", "label": "STD", "mandatory": false, "standard": true},
+        {"key": "style", "label": "STYLE", "mandatory": false, "blocking": true},
+        {"key": "finish", "label": "FINISH", "mandatory": false},
+        {"key": "service", "label": "SERVICE", "mandatory": false, "blocking": true, "service": true}
+      ]
+    },
+    "PIPE": {
+      "item_name": "PIPE, SEAMLESS",
+      "nsc": "4710",
+      "unspsc": "40174000",
+      "hsn": "73041900",
+      "eclass": "36-01-01-01",
+      "keywords": ["PIPE", "SEAMLESS PIPE", "ERW PIPE", "TUBE", "TUBING"],
+      "attributes": [
+        {"key": "nominal_size", "label": "SIZE", "unit": "NB", "mandatory": true, "blocking": true},
+        {"key": "schedule", "label": "SCHEDULE", "mandatory": true, "blocking": false, "ordered": "pipe_schedule"},
+        {"key": "material", "label": "MATERIAL", "mandatory": true, "blocking": true, "kg": true},
+        {"key": "construction", "label": "CONSTRUCTION", "mandatory": false, "blocking": true},
+        {"key": "standard", "label": "STD", "mandatory": false, "standard": true},
+        {"key": "end_connection", "label": "ENDS", "mandatory": false, "blocking": true},
+        {"key": "finish", "label": "FINISH", "mandatory": false},
+        {"key": "service", "label": "SERVICE", "mandatory": false, "blocking": true, "service": true}
+      ]
+    },
+    "PIPE_FITTING": {
+      "item_name": "FITTING, PIPE",
+      "nsc": "4730",
+      "unspsc": "40142000",
+      "hsn": "73079900",
+      "eclass": "36-02-01-01",
+      "keywords": ["ELBOW", "TEE", "REDUCER", "FLANGE", "COUPLING", "UNION", "NIPPLE", "CAP", "BEND", "FITTING"],
+      "attributes": [
+        {"key": "fitting_type", "label": "TYPE", "mandatory": true, "blocking": true},
+        {"key": "nominal_size", "label": "SIZE", "unit": "NB", "mandatory": true, "blocking": true},
+        {"key": "pressure_class", "label": "CLASS", "mandatory": false, "blocking": false, "ordered": "pressure_class"},
+        {"key": "schedule", "label": "SCHEDULE", "mandatory": false, "ordered": "pipe_schedule"},
+        {"key": "material", "label": "MATERIAL", "mandatory": true, "blocking": true, "kg": true},
+        {"key": "end_connection", "label": "ENDS", "mandatory": false, "blocking": true},
+        {"key": "angle", "label": "ANGLE", "mandatory": false, "blocking": true},
+        {"key": "standard", "label": "STD", "mandatory": false, "standard": true},
+        {"key": "service", "label": "SERVICE", "mandatory": false, "blocking": true, "service": true}
+      ]
+    },
+    "VALVE": {
+      "item_name": "VALVE",
+      "nsc": "4820",
+      "unspsc": "40141600",
+      "hsn": "84818030",
+      "eclass": "37-01-01-01",
+      "keywords": ["VALVE", "GATE VALVE", "GLOBE VALVE", "BALL VALVE", "CHECK VALVE", "BUTTERFLY VALVE", "NEEDLE VALVE", "PLUG VALVE", "SAFETY VALVE"],
+      "attributes": [
+        {"key": "valve_type", "label": "TYPE", "mandatory": true, "blocking": true},
+        {"key": "nominal_size", "label": "SIZE", "unit": "NB", "mandatory": true, "blocking": true},
+        {"key": "pressure_class", "label": "CLASS", "mandatory": true, "blocking": false, "ordered": "pressure_class"},
+        {"key": "material", "label": "BODY MATERIAL", "mandatory": true, "blocking": true, "kg": true},
+        {"key": "trim", "label": "TRIM", "mandatory": false, "blocking": false, "kg": true},
+        {"key": "end_connection", "label": "ENDS", "mandatory": true, "blocking": true},
+        {"key": "operation", "label": "OPERATION", "mandatory": false, "blocking": true},
+        {"key": "standard", "label": "STD", "mandatory": false, "standard": true},
+        {"key": "service", "label": "SERVICE", "mandatory": false, "blocking": true, "service": true}
+      ]
+    },
+    "BEARING": {
+      "item_name": "BEARING, BALL, ANNULAR",
+      "nsc": "3110",
+      "unspsc": "31171500",
+      "hsn": "84821011",
+      "eclass": "23-05-01-01",
+      "keywords": ["BEARING", "BALL BEARING", "ROLLER BEARING", "BRG", "DEEP GROOVE"],
+      "attributes": [
+        {"key": "designation", "label": "DESIGNATION", "mandatory": true, "blocking": true},
+        {"key": "bore_mm", "label": "BORE", "unit": "MM", "numeric": true, "mandatory": true, "blocking": true, "tolerance": 0.0},
+        {"key": "series", "label": "SERIES", "mandatory": false, "blocking": true},
+        {"key": "seal", "label": "SEAL", "mandatory": false, "blocking": true},
+        {"key": "clearance", "label": "CLEARANCE", "mandatory": false, "blocking": true},
+        {"key": "material", "label": "MATERIAL", "mandatory": false, "kg": true},
+        {"key": "standard", "label": "STD", "mandatory": false, "standard": true}
+      ]
+    },
+    "CABLE": {
+      "item_name": "CABLE, POWER, INSULATED",
+      "nsc": "6145",
+      "unspsc": "26121600",
+      "hsn": "85446090",
+      "eclass": "27-06-01-01",
+      "keywords": ["CABLE", "WIRE", "CONDUCTOR", "FLEXIBLE CABLE", "POWER CABLE", "CONTROL CABLE"],
+      "attributes": [
+        {"key": "cores", "label": "CORES", "numeric": true, "mandatory": true, "blocking": true, "tolerance": 0.0},
+        {"key": "csa_sqmm", "label": "CROSS SECTION", "unit": "SQMM", "numeric": true, "mandatory": true, "blocking": true, "tolerance": 0.0},
+        {"key": "voltage", "label": "VOLTAGE GRADE", "mandatory": true, "blocking": false, "ordered": "cable_voltage"},
+        {"key": "insulation", "label": "INSULATION", "mandatory": true, "blocking": true, "kg": true},
+        {"key": "conductor", "label": "CONDUCTOR", "mandatory": true, "blocking": true, "kg": true},
+        {"key": "armour", "label": "ARMOUR", "mandatory": false, "blocking": true, "kg": true},
+        {"key": "standard", "label": "STD", "mandatory": false, "standard": true}
+      ]
+    },
+    "GASKET": {
+      "item_name": "GASKET",
+      "nsc": "5330",
+      "unspsc": "31401500",
+      "hsn": "84841000",
+      "eclass": "23-12-01-01",
+      "keywords": ["GASKET", "SPIRAL WOUND", "RING JOINT", "SEAL RING", "JOINTING SHEET"],
+      "attributes": [
+        {"key": "gasket_type", "label": "TYPE", "mandatory": true, "blocking": true},
+        {"key": "nominal_size", "label": "SIZE", "unit": "NB", "mandatory": true, "blocking": true},
+        {"key": "pressure_class", "label": "CLASS", "mandatory": true, "blocking": true, "ordered": "pressure_class"},
+        {"key": "material", "label": "FILLER MATERIAL", "mandatory": true, "blocking": true, "kg": true},
+        {"key": "winding", "label": "WINDING", "mandatory": false, "kg": true},
+        {"key": "standard", "label": "STD", "mandatory": false, "standard": true},
+        {"key": "service", "label": "SERVICE", "mandatory": false, "blocking": true, "service": true}
+      ]
+    },
+    "GENERIC": {
+      "item_name": "ITEM",
+      "nsc": "9999",
+      "unspsc": "00000000",
+      "hsn": "00000000",
+      "eclass": "00-00-00-00",
+      "keywords": [],
+      "attributes": [
+        {"key": "noun", "label": "NOUN", "mandatory": true, "blocking": true},
+        {"key": "material", "label": "MATERIAL", "mandatory": false, "kg": true},
+        {"key": "standard", "label": "STD", "mandatory": false, "standard": true},
+        {"key": "service", "label": "SERVICE", "mandatory": false, "blocking": true, "service": true}
+      ]
+    }
+  },
+  "engineered_markers": [
+    "AS PER DRAWING", "AS PER DRG", "AS PER ATTACHED", "CUSTOM BUILT", "FABRICATED TO ORDER",
+    "MADE TO ORDER", "TAILOR MADE", "SPECIAL FABRICATION", "AS PER SPEC NO", "SKID", "PACKAGE UNIT",
+    "TURNKEY", "ENGINEERED TO ORDER", "ETO", "BESPOKE"
+  ]
+}

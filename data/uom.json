@@ -1,0 +1,60 @@
+{
+  "_comment": "Unit-of-measure algebra. 'units' maps every alias seen in CPSE material masters onto a UN/CEFACT Recommendation 20 code, a physical dimension and a factor to the base unit of that dimension. 'packs' are units that denote a container, not a quantity - their content is inferred from the description or falls back to default_qty. This table is what makes cross-CPSE price comparison and demand aggregation arithmetically valid.",
+  "version": "1.0.0",
+  "bases": {
+    "length": "MTR",
+    "mass": "KGM",
+    "count": "C62",
+    "volume": "LTR",
+    "area": "MTK",
+    "time": "HUR"
+  },
+  "units": {
+    "MTR":  {"code": "MTR", "dimension": "length", "factor": 1.0,     "aliases": ["M", "MTR", "MT", "MTRS", "METER", "METRE", "METERS", "METRES", "RM", "RMT", "R.MTR", "RUNNING METER", "RUNNING METRE"]},
+    "CMT":  {"code": "CMT", "dimension": "length", "factor": 0.01,    "aliases": ["CM", "CMT", "CENTIMETER", "CENTIMETRE"]},
+    "MMT":  {"code": "MMT", "dimension": "length", "factor": 0.001,   "aliases": ["MM", "MMT", "MILLIMETER", "MILLIMETRE"]},
+    "KMT":  {"code": "KMT", "dimension": "length", "factor": 1000.0,  "aliases": ["KM", "KMT", "KILOMETER", "KILOMETRE"]},
+    "INH":  {"code": "INH", "dimension": "length", "factor": 0.0254,  "aliases": ["IN", "INH", "INCH", "INCHES", "\""]},
+    "FOT":  {"code": "FOT", "dimension": "length", "factor": 0.3048,  "aliases": ["FT", "FOT", "FEET", "FOOT", "'"]},
+
+    "KGM":  {"code": "KGM", "dimension": "mass",   "factor": 1.0,     "aliases": ["KG", "KGM", "KGS", "KILO", "KILOGRAM", "KILOGRAMME"]},
+    "GRM":  {"code": "GRM", "dimension": "mass",   "factor": 0.001,   "aliases": ["G", "GM", "GRM", "GRAM", "GRAMS"]},
+    "TNE":  {"code": "TNE", "dimension": "mass",   "factor": 1000.0,  "aliases": ["T", "TON", "TONNE", "TNE", "MT-TON", "METRIC TON"]},
+    "QTL":  {"code": "QTL", "dimension": "mass",   "factor": 100.0,   "aliases": ["QTL", "QUINTAL"]},
+
+    "C62":  {"code": "C62", "dimension": "count",  "factor": 1.0,     "aliases": ["NO", "NOS", "NO.", "EA", "EACH", "PC", "PCS", "PIECE", "PIECES", "ST", "UNIT", "UNITS", "C62", "N", "NUMBER", "ITEM"]},
+    "PR":   {"code": "PR",  "dimension": "count",  "factor": 2.0,     "aliases": ["PR", "PAIR", "PAIRS"]},
+    "DZN":  {"code": "DZN", "dimension": "count",  "factor": 12.0,    "aliases": ["DZ", "DOZ", "DZN", "DOZEN"]},
+    "GRO":  {"code": "GRO", "dimension": "count",  "factor": 144.0,   "aliases": ["GRO", "GROSS"]},
+    "CEN":  {"code": "CEN", "dimension": "count",  "factor": 100.0,   "aliases": ["CEN", "HUNDRED", "HND", "C"]},
+    "MIL":  {"code": "MIL", "dimension": "count",  "factor": 1000.0,  "aliases": ["MIL", "THOUSAND", "TH"]},
+
+    "LTR":  {"code": "LTR", "dimension": "volume", "factor": 1.0,     "aliases": ["L", "LTR", "LIT", "LITRE", "LITER", "LITRES", "LITERS"]},
+    "MLT":  {"code": "MLT", "dimension": "volume", "factor": 0.001,   "aliases": ["ML", "MLT", "MILLILITRE", "MILLILITER"]},
+    "MTQ":  {"code": "MTQ", "dimension": "volume", "factor": 1000.0,  "aliases": ["M3", "CBM", "MTQ", "CUM", "CUBIC METER", "CUBIC METRE"]},
+
+    "MTK":  {"code": "MTK", "dimension": "area",   "factor": 1.0,     "aliases": ["M2", "SQM", "MTK", "SQ.M", "SQUARE METER", "SQUARE METRE"]},
+    "MMK":  {"code": "MMK", "dimension": "area",   "factor": 0.000001,"aliases": ["MM2", "SQMM", "SQ.MM", "MMK", "SQ MM", "SQUARE MM"]},
+
+    "HUR":  {"code": "HUR", "dimension": "time",   "factor": 1.0,     "aliases": ["HR", "HUR", "HOUR", "HOURS"]},
+    "DAY":  {"code": "DAY", "dimension": "time",   "factor": 24.0,    "aliases": ["DAY", "DAYS"]}
+  },
+  "packs": {
+    "DRUM":  {"dimension_hint": "length", "default_qty": 500.0,  "default_unit": "MTR", "aliases": ["DRUM", "DRM", "DRUMS", "CABLE DRUM"]},
+    "COIL":  {"dimension_hint": "length", "default_qty": 100.0,  "default_unit": "MTR", "aliases": ["COIL", "COL", "COILS"]},
+    "ROLL":  {"dimension_hint": "length", "default_qty": 50.0,   "default_unit": "MTR", "aliases": ["ROLL", "ROL", "ROLLS"]},
+    "BOX":   {"dimension_hint": "count",  "default_qty": 100.0,  "default_unit": "C62", "aliases": ["BOX", "BOXES", "BX", "CTN", "CARTON"]},
+    "PKT":   {"dimension_hint": "count",  "default_qty": 50.0,   "default_unit": "C62", "aliases": ["PKT", "PKTS", "PACKET", "PACK", "PK"]},
+    "BAG":   {"dimension_hint": "mass",   "default_qty": 50.0,   "default_unit": "KGM", "aliases": ["BAG", "BAGS", "SACK"]},
+    "CAN":   {"dimension_hint": "volume", "default_qty": 20.0,   "default_unit": "LTR", "aliases": ["CAN", "TIN", "CANS"]},
+    "BARREL":{"dimension_hint": "volume", "default_qty": 208.2,  "default_unit": "LTR", "aliases": ["BBL", "BARREL", "BRL"]},
+    "SET":   {"dimension_hint": "count",  "default_qty": 1.0,    "default_unit": "C62", "aliases": ["SET", "SETS", "KIT", "KITS", "AU"]},
+    "BUNDLE":{"dimension_hint": "count",  "default_qty": 10.0,   "default_unit": "C62", "aliases": ["BDL", "BUNDLE", "BUNDLES"]}
+  },
+  "pack_size_patterns": [
+    "(?:OF|=|:)\\s*(\\d+(?:\\.\\d+)?)\\s*(MTR|M|MTRS|METER|METRE|NOS|NO|PCS|PC|EA|KG|KGS|LTR|L)\\b",
+    "(\\d+(?:\\.\\d+)?)\\s*(MTR|M|MTRS|METER|METRE|NOS|NO|PCS|PC|EA|KG|KGS|LTR|L)\\s*(?:PER|/)\\s*(?:DRUM|COIL|ROLL|BOX|PKT|BAG|CAN|SET|BUNDLE)",
+    "(?:DRUM|COIL|ROLL|BOX|PKT|BAG|CAN|SET|BUNDLE)\\s*(?:OF\\s*)?(\\d+(?:\\.\\d+)?)\\s*(MTR|M|MTRS|NOS|NO|PCS|PC|EA|KG|KGS|LTR|L)\\b",
+    "(\\d+(?:\\.\\d+)?)\\s*(MTR|M|NOS|NO|PCS|KG|LTR)\\s*(?:DRUM|COIL|ROLL|BOX|PKT|PACK)\\b"
+  ]
+}
